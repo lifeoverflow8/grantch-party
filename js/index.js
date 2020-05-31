@@ -95,7 +95,7 @@ function render() {
 }
 
 document.getElementById('join-button').onclick = function() {
-    socket = io.connect("http://localhost:3773");
+    socket = io.connect('http://' + document.getElementById('ip-address-input').value + ':3773');
     socket.on('id', function(id) {
         ID = id;
         socket.emit('nickname', ID, nickname);
