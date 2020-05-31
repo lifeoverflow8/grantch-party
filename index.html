@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"-->
+    <title>Grantch Party</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div id="main-menu">
+      <span id="title">Grantch Party</span> <br>
+      <span id="local-ip">this is the local ip</span> <br>
+      <button id="play-button">Play</button> <br>
+      <button id="host-button">Host</button>
+      <button id="join-button">Join</button><br>
+    </div>
+    <div id="host-and-join"></div>
+    <canvas id="canvas"></canvas>
+    <script src="lib/socket.io.js"></script>
+    <script src="js/funkyJumps.js"></script>
+    <script src="js/mainMenu.js"></script>
+    <script src="js/index.js"></script>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

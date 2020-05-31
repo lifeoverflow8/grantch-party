@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#main-menu {
+    position: absolute;
+}
+
+#main-menu-text {
+    position: absolute;
+    width: 400px;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#host-button {
+    display: none;
+}
+
+#join-button {
+    display: none;
+}
