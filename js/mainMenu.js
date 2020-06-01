@@ -22,5 +22,8 @@ mainMenu = {
         document.getElementById('host-button').style.display = 'none';
         document.getElementById('join-button').style.display = 'none';
         document.getElementById('title').style.display = 'none';
+        document.getElementById('local-ip').style.display = 'none';
+        document.getElementById('ip-text').style.display = 'none';
+        document.getElementById('ip-address-input').style.display = 'none';
     }
 }

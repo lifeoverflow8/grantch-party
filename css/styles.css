@@ -23,3 +23,7 @@ body {
 #join-button {
     display: none;
 }
+
+#lobby {
+    position: absolute;
+}

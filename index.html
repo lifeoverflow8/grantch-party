@@ -12,19 +12,27 @@
     <div id="main-menu">
       <span id="title">Grantch Party</span> <br>
       <span id="local-ip">this is the local ip</span> <br>
-      <span>Put ip here bitch</span>
+      <span id="ip-text">Put IP here i guess:</span>
       <input id="ip-address-input"> <br>
       <button id="play-button">Play</button> <br>
       <button id="host-button">Host</button>
       <button id="join-button">Join</button><br>
     </div>
     <div id="host-and-join"></div>
+
+    <div id="lobby">
+      <span id="lobby-title" style="display: none;"> err... lobster screen</span> <br>
+      <button id="start-game-button" style="display: none;">Start</button>
+    </div>
     <canvas id="canvas"></canvas>
     <script src="lib/socket.io.js"></script>
+    <script src="js/lobby.js"></script>
+    <script src="./renderer.js"></script>
+    <script src="js/beatdownBoulevard.js"></script>
     <script src="js/funkyJumps.js"></script>
     <script src="js/mainMenu.js"></script>
     <script src="js/index.js"></script>
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+
   </body>
 </html>

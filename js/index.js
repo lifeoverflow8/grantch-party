@@ -95,7 +95,14 @@ function render() {
 }
 
 document.getElementById('join-button').onclick = function() {
-    socket = io.connect('http://' + document.getElementById('ip-address-input').value + ':3773');
+    if (isHost) {
+        socket = io.connect('http://localhost:3773');
+    }
+    else {
+        socket = io.connect('http://' + document.getElementById('ip-address-input').value + ':3773');
+        console.log(isHost);
+    }
+
     socket.on('id', function(id) {
         ID = id;
         socket.emit('nickname', ID, nickname);
@@ -111,6 +118,14 @@ document.getElementById('join-button').onclick = function() {
         }
     });
 
+    socket.on('new_game_fj', function() {
+        changeScene(funkyJumps);
+    });
+
+    socket.on('new_game_bb', function() {
+        changeScene(beatDown);
+    });
+
     socket.on('disconnect', function(id) {
         for (i = 0; i < clients.length; i ++) {
             if (clients[i].id == id) {
@@ -119,7 +134,7 @@ document.getElementById('join-button').onclick = function() {
         }
     });
 
-    changeScene(funkyJumps);
+    changeScene(lobby);
 }
 
 function changeScene(newScene) {
